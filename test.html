@@ -1,0 +1,471 @@
+html
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung Thu Lung Linh - Chúc Ngọc Huyền</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- ================= FIRST-TIME FADE POPUP ================= -->
+        <div id="welcomePopup" style="
+            position: fixed;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.95);
+            color: #c44569;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 32px 40px;
+            border-radius: 18px;
+            box-shadow: 0 0 32px #ffb36b;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: auto;
+            
+        ">
+            ✨Cảm ơn NH đã nhận món quà của PT.
+            Đây là trang wed mà PT đã viết riêng để tặng cho NH.
+            Chúc NH có một đêm trăng rằm thật vui vẻ, một cái TẾT đoàn viên êm ấm bên gia đình nhé.
+            Trung thu năm nay PT đi huấn luyện xa rồi nên không thể về tặng quà cho NH được.
+            Đọc xong rồi thì đóng cái popup lại và nhận quà đi.
+            Nhớ ấn nút bật nhạc bên góc phải để phát nhạc nhe🐣
+            <br><br>
+            <button id="closeWelcomePopup" style="margin-top:-10px; padding:8px 18px; font-size:18px; border-radius:10px; border:none; background:#ffb36b; color:#fff; cursor:pointer;">Đóng</button>
+        </div>
+
+           
+        <!-- ================= LAYER 1: SKY BACKGROUND ================= -->
+    <!-- TODO: Add more sky gradients or aurora effects here for expansion -->
+    <div class="sky"></div>
+
+    <!-- ================= LAYER 2: GALAXY (30 LAYERS, MORE STARS FOR DENSITY) ================= -->
+    <!-- TODO: Duplicate <div class="galaxy-layer layerX">...<span>s</span></div> to add layer31+ -->
+    <div class="galaxy-container">
+        <div class="galaxy-layer layer1"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div> <!-- More spans -->
+        <div class="galaxy-layer layer2"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer3"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer4"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer5"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer6"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer7"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer8"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer9"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer10"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer11"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer12"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer13"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer14"><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer15"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer16"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer17"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer18"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer19"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer20"><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer21"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer22"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer23"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer24"><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer25"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer26"><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer27"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer28"><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer29"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="galaxy-layer layer30"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <!-- ================= LAYER 3: CLOUDS (10+ LAYERS, EASY TO ADD MORE) ================= -->
+    <!-- TODO: Add more clouds by copying <div class="cloud layer-cloudX" style="...">...<div>s</div></div> -->
+    <div class="clouds-container">
+        <div class="cloud layer-cloud1" style="width:160px;height:80px;top:180px;">
+            <div></div><div></div><div></div><div></div> <!-- Added one more puff for detail -->
+        </div>
+        <div class="cloud layer-cloud2" style="width:200px;height:100px;top:260px;">
+            <div></div><div></div><div></div><div></div><div></div> <!-- Extra puff -->
+        </div>
+        <div class="cloud layer-cloud3" style="width:140px;height:70px;top:320px;">
+            <div></div><div></div><div></div> <!-- Extra puff -->
+        </div>
+        <div class="cloud layer-cloud4" style="width:180px;height:90px;top:100px;">
+            <div></div><div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud5" style="width:150px;height:75px;top:220px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud6" style="width:130px;height:65px;top:50px;">
+            <div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud7" style="width:170px;height:85px;top:300px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud8" style="width:160px;height:80px;top:140px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud9" style="width:180px;height:90px;top:200px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud10" style="width:150px;height:75px;top:280px;">
+            <div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud11" style="width:170px;height:85px;top:300px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud12" style="width:130px;height:90px;top:250px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud13" style="width:130px;height:85px;top:280px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud14" style="width:190px;height:65px;top:300px;">
+            <div></div><div></div><div></div>
+        </div>
+        <div class="cloud layer-cloud15" style="width:180px;height:75px;top:270px;">
+            <div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <!-- ================= LAYER 4: STARS (100+ TWINKLING STARS + SHOOTING STARS) ================= -->
+    <!-- TODO: Add more shooting stars: <div class="shooting-star shootingX"></div> -->
+    <div class="stars-container">
+        <!-- Twinkling stars generated dynamically in JS -->
+        <div class="shooting-star shooting1"></div>
+        <div class="shooting-star shooting2"></div>
+        <div class="shooting-star shooting3"></div>
+        <div class="shooting-star shooting4"></div>
+        <div class="shooting-star shooting5"></div>
+        <div class="shooting-star shooting6"></div>
+        <div class="shooting-star shooting7"></div>
+        <div class="shooting-star shooting8"></div>
+        <div class="shooting-star shooting9"></div>
+        <div class="shooting-star shooting10"></div>
+        <div class="shooting-star shooting11"></div>
+        <div class="shooting-star shooting12"></div>
+        <div class="shooting-star shooting13"></div>
+        <div class="shooting-star shooting14"></div>
+        <div class="shooting-star shooting15"></div>
+        <div class="shooting-star shooting16"></div>
+        <div class="shooting-star shooting17"></div>
+        <div class="shooting-star shooting18"></div>
+        <div class="shooting-star shooting19"></div>
+        <div class="shooting-star shooting20"></div>
+    </div>
+
+    <!-- ================= LAYER 5: MOON ================= -->
+    <!-- TODO: Add moon craters via extra divs or SVG paths if needed -->
+    <div class="moon-container">
+        <div class="moon"></div>
+        <!-- Moon glow halo (pseudo-element in CSS) -->
+    </div>
+
+    <!-- ================= LAYER 6: GREETING / WISH TEXT ================= -->
+    <div class="greeting-container">
+        <div class="greeting">🌕 Chúc Ngọc Huyền Trung Thu Vui Vẻ 🎀</div>
+        <div class="guide">🌸 Click màn hình hoặc nút để thả lồng đèn · Click lồng đèn để nhận lời chúc 🌸</div>
+    </div>
+
+    <!-- ================= LAYER 7: RABBIT CHARACTER (LARGER SIZE) ================= -->
+    <!-- TODO: Add more character details like tail or accessories here -->
+    <div class="character-container">
+        <svg class="rabbit" viewBox="-20 -20 240 340" xmlns="http://www.w3.org/2000/svg"> <!-- Expanded viewBox to avoid square clipping -->
+            <!-- Background subtle glow for rabbit (clipped to SVG bounds) -->
+            <defs>
+                <clipPath id="rabbitClip">
+                    <rect x="-20" y="-20" width="240" height="340" rx="20"/> <!-- Rounded clip to avoid square edges -->
+                </clipPath>
+                <filter id="rabbitGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#ffe5f0" flood-opacity="0.5"/> <!-- Softer glow -->
+                </filter>
+                <filter id="sparkleGlow">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <feMerge> 
+                        <feMergeNode in="coloredBlur"/> 
+                        <feMergeNode in="SourceGraphic"/> 
+                    </feMerge>
+                </filter>
+            </defs>
+            <g clip-path="url(#rabbitClip)" filter="url(#rabbitGlow)">
+                <!-- Head (larger, rounded with shading and blush) -->
+                <defs>
+                    <radialGradient id="headGradient" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="80%" stop-color="#f8f8f8" />
+                        <stop offset="100%" stop-color="#f0f0f0" />
+                    </radialGradient>
+                </defs>
+                <circle cx="100" cy="140" r="50" fill="url(#headGradient)" stroke="#ffe5f0" stroke-width="2"/> <!-- Larger head -->
+                <!-- Cheek blush (larger, softer) -->
+                <ellipse cx="70" cy="145" rx="12" ry="8" fill="#ffccdd" opacity="0.7" filter="url(#sparkleGlow)" />
+                <ellipse cx="130" cy="145" rx="12" ry="8" fill="#ffccdd" opacity="0.7" filter="url(#sparkleGlow)" />
+                <!-- Ears (longer, floppier, with inner pink, veins, and fur tufts) -->
+                <defs>
+                    <linearGradient id="earGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="100%" stop-color="#f0f0f0" />
+                    </linearGradient>
+                    <linearGradient id="innerEarGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffb3cc" />
+                        <stop offset="100%" stop-color="#ff99cc" />
+                    </linearGradient>
+                </defs>
+                <!-- Left ear outer (larger) -->
+                <path class="ear-left" d="M70 80 Q50 20 70 5 Q90 20 70 80 Z" fill="url(#earGradient)" stroke="#ffe5f0" stroke-width="2" transform-origin="70 100" filter="url(#sparkleGlow)" />
+                <!-- Left ear inner -->
+                <path d="M70 85 Q60 25 70 10 Q80 25 70 85 Z" fill="url(#innerEarGradient)" stroke="#ff99cc" stroke-width="2" />
+                <!-- Veins and fur tufts on left ear -->
+                <path d="M70 50 Q65 30 70 15" stroke="#ff88bb" stroke-width="1.5" fill="none" opacity="0.8" />
+                <path d="M70 60 Q75 40 70 25" stroke="#ff88bb" stroke-width="1.5" fill="none" opacity="0.8" />
+                <!-- Fur tuft at tip -->
+                <ellipse cx="70" cy="8" rx="3" ry="2" fill="white" opacity="0.9" filter="url(#sparkleGlow)" />
+                <!-- Right ear outer (larger) -->
+                <path class="ear-right" d="M130 80 Q150 20 130 5 Q110 20 130 80 Z" fill="url(#earGradient)" stroke="#ffe5f0" stroke-width="2" transform-origin="130 100" filter="url(#sparkleGlow)" />
+                <!-- Right ear inner -->
+                <path d="M130 85 Q140 25 130 10 Q120 25 130 85 Z" fill="url(#innerEarGradient)" stroke="#ff99cc" stroke-width="2" />
+                <!-- Veins and fur tufts on right ear -->
+                <path d="M130 50 Q135 30 130 15" stroke="#ff88bb" stroke-width="1.5" fill="none" opacity="0.8" />
+                <path d="M130 60 Q125 40 130 25" stroke="#ff88bb" stroke-width="1.5" fill="none" opacity="0.8" />
+                <!-- Fur tuft at tip -->
+                <ellipse cx="130" cy="8" rx="3" ry="2" fill="white" opacity="0.9" filter="url(#sparkleGlow)" />
+                <!-- Eyes (large, expressive with reflections, pupils, and lashes) -->
+                <defs>
+                    <radialGradient id="eyeGradient" cx="30%" cy="30%" r="50%">
+                        <stop offset="0%" stop-color="#4a90e2" />
+                        <stop offset="100%" stop-color="#2a5a9a" />
+                    </radialGradient>
+                </defs>
+                <!-- Left eye (larger) -->
+                <circle class="eye-left" cx="80" cy="130" r="9" fill="url(#eyeGradient)" stroke="#000" stroke-width="1" filter="url(#sparkleGlow)" />
+                <circle cx="82" cy="128" r="3" fill="white" opacity="0.9" class="eye-sparkle" /> <!-- Sparkly highlight -->
+                <circle cx="84" cy="130" r="2.5" fill="#000" /> <!-- Pupil -->
+                <!-- Lashes left -->
+                <path d="M72 125 Q75 122 78 125" stroke="#000" stroke-width="1" fill="none" />
+                <path d="M74 127 Q76 124 78 127" stroke="#000" stroke-width="1" fill="none" />
+                <!-- Right eye (larger) -->
+                <circle class="eye-right" cx="120" cy="130" r="9" fill="url(#eyeGradient)" stroke="#000" stroke-width="1" filter="url(#sparkleGlow)" />
+                <circle cx="118" cy="128" r="3" fill="white" opacity="0.9" class="eye-sparkle" /> <!-- Sparkly highlight -->
+                <circle cx="116" cy="130" r="2.5" fill="#000" /> <!-- Pupil -->
+                <!-- Lashes right -->
+                <path d="M128 125 Q125 122 122 125" stroke="#000" stroke-width="1" fill="none" />
+                <path d="M126 127 Q124 124 122 127" stroke="#000" stroke-width="1" fill="none" />
+                <!-- Nose (cute triangle with shine and nostrils) -->
+                <defs>
+                    <radialGradient id="noseGradient" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ff69b4" />
+                        <stop offset="100%" stop-color="#ff1493" />
+                    </radialGradient>
+                </defs>
+                <polygon class="nose" points="100,150 95,155 105,155" fill="url(#noseGradient)" stroke="#ff99cc" stroke-width="1.5" filter="url(#sparkleGlow)" />
+                <circle cx="100" cy="152" r="1.5" fill="white" opacity="0.8" class="sparkle-dot" /> <!-- Sparkly shine -->
+                <circle cx="98" cy="154" r="0.5" fill="#000" opacity="0.9" /> <!-- Left nostril -->
+                <circle cx="102" cy="154" r="0.5" fill="#000" opacity="0.9" /> <!-- Right nostril -->
+                <!-- Mouth (smiling curve with teeth and tongue) -->
+                <path d="M90 165 Q100 170 110 165" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" filter="url(#sparkleGlow)" />
+                <!-- Teeth (small white triangles) -->
+                <polygon points="95,168 97,170 99,168" fill="white" stroke="#000" stroke-width="0.5" class="sparkle-dot" />
+                <polygon points="101,168 103,170 105,168" fill="white" stroke="#000" stroke-width="0.5" class="sparkle-dot" />
+                <!-- Tongue (pink curve) -->
+                <path d="M100 167 Q101 171 100 169 Q99 171 100 167" fill="#ffccdd" stroke="#ff99cc" stroke-width="1" opacity="0.8" filter="url(#sparkleGlow)" />
+                <!-- Whiskers (curved lines with thickness variation) -->
+                <path d="M60 150 Q50 148 40 150" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <path d="M60 155 Q55 153 45 155" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <path d="M60 160 Q50 162 40 160" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <path d="M140 150 Q150 148 160 150" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <path d="M140 155 Q145 153 155 155" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <path d="M140 160 Q150 162 160 160" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                <!-- Body (plump, sitting pose with belly, holding mooncake) -->
+                <defs>
+                    <radialGradient id="bodyGradient" cx="50%" cy="60%" r="50%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="80%" stop-color="#f8f8f8" />
+                        <stop offset="100%" stop-color="#f0f0f0" />
+                    </radialGradient>
+                </defs>
+                <ellipse cx="100" cy="220" rx="50" ry="70" fill="url(#bodyGradient)" stroke="#ffe5f0" stroke-width="2" filter="url(#sparkleGlow)" /> <!-- Larger body -->
+                <!-- Belly fluff -->
+                <ellipse cx="100" cy="210" rx="20" ry="10" fill="white" opacity="0.6" class="sparkle-dot" />
+                <!-- Arms (bent, holding mooncake, with paw details) -->
+                <ellipse cx="75" cy="200" rx="15" ry="25" fill="white" stroke="#ffe5f0" stroke-width="2" transform="rotate(-15 75 200)" filter="url(#sparkleGlow)" />
+                <circle cx="65" cy="210" r="4" fill="#ffccdd" class="sparkle-dot" /> <!-- Paw pad -->
+                <ellipse cx="125" cy="200" rx="15" ry="25" fill="white" stroke="#ffe5f0" stroke-width="2" transform="rotate(15 125 200)" filter="url(#sparkleGlow)" />
+                <circle cx="135" cy="210" r="4" fill="#ffccdd" class="sparkle-dot" /> <!-- Paw pad -->
+                <!-- Mooncake in paws (detailed with patterns) -->
+                <circle cx="100" cy="195" r="12" fill="#d4a017" stroke="#b8940a" stroke-width="2" class="sparkle-dot" />
+                <path d="M100 190 L95 195 L100 200 L105 195 Z" fill="#c99a0f" stroke="#b8940a" stroke-width="1" class="sparkle-dot" />
+                <path d="M100 195 L98 198 L102 198 Z" fill="#e6b800" stroke="none" class="sparkle-dot" />
+                <!-- Legs (sitting, short and chubby) -->
+                <ellipse cx="85" cy="265" rx="18" ry="12" fill="white" stroke="#ffe5f0" stroke-width="2" filter="url(#sparkleGlow)" />
+                <circle cx="80" cy="270" r="5" fill="#ffccdd" class="sparkle-dot" /> <!-- Foot pad -->
+                <ellipse cx="115" cy="265" rx="18" ry="12" fill="white" stroke="#ffe5f0" stroke-width="2" filter="url(#sparkleGlow)" />
+                <circle cx="120" cy="270" r="5" fill="#ffccdd" class="sparkle-dot" /> <!-- Foot pad -->
+                <!-- Tail (fluffy pom-pom) -->
+                <circle cx="140" cy="240" r="10" fill="white" stroke="#ffe5f0" stroke-width="2" filter="url(#sparkleGlow)" />
+                <ellipse cx="142" cy="238" rx="4" ry="3" fill="#f0f0f0" class="sparkle-dot" />
+                <!-- Gifts beside (two boxes with hearts) -->
+                <rect x="30" y="250" width="20" height="25" fill="#ffccdd" stroke="#ff99cc" stroke-width="2" rx="3" filter="url(#sparkleGlow)" />
+                <path d="M35 255 L35 260 L40 255 M45 255 L45 260 L40 255" stroke="#ff99cc" stroke-width="1" fill="none" />
+                <path d="M37 252 L38 250 L39 252 Z" fill="#ff69b4" class="sparkle-dot" />
+                <rect x="20" y="230" width="20" height="25" fill="#ffccdd" stroke="#ff99cc" stroke-width="2" rx="3" filter="url(#sparkleGlow)" />
+                <path d="M25 235 L25 240 L30 235 M35 235 L35 240 L30 235" stroke="#ff99cc" stroke-width="1" fill="none" />
+                <path d="M27 232 L28 230 L29 232 Z" fill="#ff69b4" class="sparkle-dot" />
+                <!-- Detailed Pink Bow on Left Ear (larger, shifted right, inspired by image) -->
+                <defs>
+                    <radialGradient id="bowGradient" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ff69b4" />
+                        <stop offset="70%" stop-color="#ff1493" />
+                        <stop offset="100%" stop-color="#ff00aa" />
+                    </radialGradient>
+                    <radialGradient id="knotGradient" cx="30%" cy="30%" r="50%">
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="100%" stop-color="#ffccff" />
+                    </radialGradient>
+                </defs>
+                <g class="bow" transform="translate(60,70)" filter="url(#sparkleGlow)"> <!-- Shifted right -->
+                    <!-- Left bow loop (larger) -->
+                    <path d="M20 15 Q5 0 15 15 Q5 30 20 15 Z" fill="url(#bowGradient)" stroke="#ff99cc" stroke-width="2" class="sparkle-dot" />
+                    <path d="M15 10 Q10 5 12 10 Q10 15 15 10 Z" fill="#ff88bb" stroke="#ff99cc" stroke-width="1.5" opacity="0.9" class="sparkle-dot" />
+                    <!-- Right bow loop (larger) -->
+                    <path d="M30 15 Q45 0 35 15 Q45 30 30 15 Z" fill="url(#bowGradient)" stroke="#ff99cc" stroke-width="2" class="sparkle-dot" />
+                    <path d="M35 10 Q40 5 38 10 Q40 15 35 10 Z" fill="#ff88bb" stroke="#ff99cc" stroke-width="1.5" opacity="0.9" class="sparkle-dot" />
+                    <!-- Center knot (diamond shape with shine) -->
+                    <polygon points="25,10 20,15 25,20 30,15" fill="url(#knotGradient)" stroke="#ff99cc" stroke-width="1.5" class="sparkle-dot" />
+                    <circle cx="25" cy="15" r="2" fill="white" opacity="1" class="sparkle-dot" />
+                    <!-- Ribbon tails (longer, wavy, with fringes) -->
+                    <path d="M25 25 L20 40 Q25 45 30 40 Z" fill="url(#bowGradient)" stroke="#ff99cc" stroke-width="2" opacity="0.95" class="sparkle-dot" />
+                    <path d="M20 40 L18 50 Q20 52 22 50" stroke="#ff99cc" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                    <path d="M30 40 L32 50 Q30 52 28 50" stroke="#ff99cc" stroke-width="2" fill="none" stroke-linecap="round" class="whisker" />
+                    <!-- Fringe details on tails -->
+                    <line x1="19" y1="45" x2="19" y2="48" stroke="#ff99cc" stroke-width="1" class="sparkle-dot" />
+                    <line x1="21" y1="45" x2="21" y2="48" stroke="#ff99cc" stroke-width="1" class="sparkle-dot" />
+                    <line x1="31" y1="45" x2="31" y2="48" stroke="#ff99cc" stroke-width="1" class="sparkle-dot" />
+                    <line x1="29" y1="45" x2="29" y2="48" stroke="#ff99cc" stroke-width="1" class="sparkle-dot" />
+                </g>
+                <!-- Subtle sparkles around rabbit (small animated dots) -->
+                <circle cx="50" cy="100" r="1" fill="#fff6b3" class="rabbit-sparkle" style="animation-delay: 0s;"/>
+                <circle cx="150" cy="100" r="1" fill="#fff6b3" class="rabbit-sparkle" style="animation-delay: 0.5s;"/>
+                <circle cx="80" cy="200" r="1.5" fill="#ffeb99" class="rabbit-sparkle" style="animation-delay: 1s;"/>
+                <circle cx="120" cy="200" r="1.5" fill="#ffeb99" class="rabbit-sparkle" style="animation-delay: 1.5s;"/>
+                <circle cx="100" cy="250" r="1" fill="#fff6b3" class="rabbit-sparkle" style="animation-delay: 2s;"/>
+                <circle cx="40" cy="220" r="0.8" fill="#ffeb99" class="rabbit-sparkle" style="animation-delay: 0.3s;"/>
+                <circle cx="160" cy="220" r="0.8" fill="#fff6b3" class="rabbit-sparkle" style="animation-delay: 1.2s;"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- ================= LAYER 7.5: TREES AND CHỊ HẰNG (NEW LAYER) ================= -->
+    <div class="hằng-container">
+        <!-- Trees (pine trees under moon) -->
+        <svg class="tree-left" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 200 L40 150 Q50 140 60 150 Z" fill="#228B22" stroke="#006400" stroke-width="1"/>
+            <path d="M50 170 L30 120 Q50 110 70 120 Z" fill="#32CD32" stroke="#006400" stroke-width="1"/>
+            <path d="M50 140 L20 80 Q50 70 80 80 Z" fill="#228B22" stroke="#006400" stroke-width="1"/>
+            <rect x="45" y="180" width="10" height="20" fill="#8B4513"/>
+        </svg>
+        <svg class="tree-right" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 200 L40 150 Q50 140 60 150 Z" fill="#228B22" stroke="#006400" stroke-width="1"/>
+            <path d="M50 170 L30 120 Q50 110 70 120 Z" fill="#32CD32" stroke="#006400" stroke-width="1"/>
+            <path d="M50 140 L20 80 Q50 70 80 80 Z" fill="#228B22" stroke="#006400" stroke-width="1"/>
+            <rect x="45" y="180" width="10" height="20" fill="#8B4513"/>
+        </svg>
+        <!-- Chị Hằng (Moon Lady with hanfu, hair, mooncakes, rabbit on branch) -->
+        <svg class="hằng" viewBox="0 0 150 250" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="hằngSkin" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffe4c4"/>
+                    <stop offset="100%" stop-color="#f0d9b5"/>
+                </radialGradient>
+                <linearGradient id="hằngHair" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B4513"/>
+                    <stop offset="100%" stop-color="#654321"/>
+                </linearGradient>
+                <linearGradient id="hằngCloth" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#ff69b4"/>
+                    <stop offset="1" stop-color="#da70d6"/>
+                </linearGradient>
+                <filter id="hằngGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge>
+                        <feMergeNode in="blur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <g filter="url(#hằngGlow)">
+                <!-- Hair (long, flowing) -->
+                <path d="M75 20 Q60 0 75 -10 Q90 0 75 20 Q50 40 75 60 Q100 40 75 20 Z M75 20 L60 80 Q70 100 80 80 Z" fill="url(#hằngHair)" stroke="#5D4037" stroke-width="1"/>
+                <!-- Hair ornaments (flower and ribbon) -->
+                <circle cx="70" cy="15" r="4" fill="#ff69b4"/>
+                <path d="M70 15 Q65 10 70 5 Q75 10 70 15" fill="#da70d6" stroke="#c71585" stroke-width="1"/>
+                <path d="M75 20 L80 30 Q75 35 70 30 Z" fill="#00bfff" stroke="#1e90ff" stroke-width="1"/>
+                <!-- Face -->
+                <ellipse cx="75" cy="60" rx="20" ry="25" fill="url(#hằngSkin)" stroke="#d2b48c" stroke-width="1"/>
+                <!-- Eyes -->
+                <circle cx="68" cy="55" r="3" fill="black"/>
+                <circle cx="82" cy="55" r="3" fill="black"/>
+                <circle cx="69" cy="54" r="1" fill="white"/>
+                <circle cx="83" cy="54" r="1" fill="white"/>
+                <!-- Nose -->
+                <line x1="75" y1="60" x2="75" y2="65" stroke="#d2b48c" stroke-width="1"/>
+                <!-- Mouth (gentle smile) -->
+                <path d="M70 70 Q75 72 80 70" fill="none" stroke="#ff69b4" stroke-width="2"/>
+                <!-- Body (hanfu dress, flowing sleeves) -->
+                <path d="M55 85 Q75 120 95 85 L95 150 Q75 160 55 150 Z" fill="url(#hằngCloth)" stroke="#c71585" stroke-width="2"/>
+                <!-- Sleeves (wide, flowing) -->
+                <path d="M55 100 Q30 130 55 160 L75 140 Q50 170 75 190" fill="#add8e6" stroke="#87ceeb" stroke-width="1" opacity="0.8"/>
+                <path d="M95 100 Q120 130 95 160 L75 140 Q100 170 75 190" fill="#add8e6" stroke="#87ceeb" stroke-width="1" opacity="0.8"/>
+                <!-- Belt -->
+                <ellipse cx="75" cy="125" rx="15" ry="5" fill="#ff1493" stroke="#c71585" stroke-width="1"/>
+                <!-- Holding mooncakes -->
+                <circle cx="65" cy="140" r="6" fill="#d4a017" stroke="#b8940a" stroke-width="1"/>
+                <path d="M65 135 L60 140 L65 145 L70 140 Z" fill="#c99a0f" stroke="#b8940a" stroke-width="0.5"/>
+                <circle cx="85" cy="140" r="6" fill="#d4a017" stroke="#b8940a" stroke-width="1"/>
+                <path d="M85 135 L80 140 L85 145 L90 140 Z" fill="#c99a0f" stroke="#b8940a" stroke-width="0.5"/>
+                <!-- Small rabbit on branch (simple) -->
+                <circle cx="110" cy="180" r="8" fill="white" stroke="#ff69b4" stroke-width="1"/>
+                <ellipse cx="110" cy="185" rx="5" ry="3" fill="white"/>
+                <circle cx="107" cy="178" r="2" fill="black"/>
+                <circle cx="113" cy="178" r="2" fill="black"/>
+                <!-- Branch under rabbit -->
+                <path d="M100 200 Q120 190 130 200" stroke="#8B4513" stroke-width="4" fill="none"/>
+                <!-- Clouds around (small) -->
+                <ellipse cx="120" cy="160" rx="10" ry="5" fill="white" opacity="0.7"/>
+                <ellipse cx="130" cy="155" rx="8" ry="4" fill="white" opacity="0.7"/>
+            </g>
+        </svg>
+    </div>
+
+    <!-- ================= LAYER 8: LANTERNS CONTAINER ================= -->
+    <!-- TODO: Add custom lantern variants here if needed -->
+    <div id="lanterns" class="lanterns-container"></div>
+
+    <!-- ================= LAYER 9: RELEASE BUTTON ================= -->
+    <button id="releaseBtn" class="release-btn">Thả Lồng Đèn</button>
+
+    <!-- ================= LAYER 10: POPUP MODAL ================= -->
+    <!-- TODO: Add more images/wishes to JS arrays; replace src in images[] with actual photos -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>🎑Trung Thu Lung Linh🎑</h2>
+        <img id="popupImg" src="" alt="Hình của Ngọc Huyền" style="aspect-ratio: 5/8;">
+        <p id="popupMsg" class="wish-text">🌕 Trung Thu này mong em luôn an yên, hạnh phúc và mỉm cười 💛.</p>
+        <div class="popup-buttons">
+            <button id="nextWishBtn" class="next-btn">Cảm ơn bạn</button>
+            <button id="closeWishBtn" class="close-btn">Đóng</button> <!-- Changed to id for JS -->
+        </div>
+    </div>
+
+    <!-- ================= AUDIO FOR BACKGROUND MUSIC ================= -->
+    <!-- TODO: Replace src="background-music.mp3" with actual file; add mute button if needed -->
+<audio id="bgMusic" loop>
+  <source src="music/nhac.m4a" type="audio/mp4">
+</audio>
+
+<button id="musicToggle" style="position: fixed; bottom: 40px; right: 40px; z-index: 9999;">
+  🎵 Bật/Tắt Nhạc
+</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
