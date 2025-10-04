@@ -206,7 +206,7 @@ function createLantern(xPercent) {
     lanternsContainer.appendChild(lantern);
 
     // Float animation (adjusted for larger size)
-    const duration = 12000 + Math.random() *40000;
+    const duration = 20000 + Math.random() *50000;
     const sway = 10 + Math.random() * 20;
     lantern.animate([
         { transform: `translateX(-50%) translateY(0) scale(${scale}) rotate(0deg)`, opacity: 0 },
